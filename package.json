@@ -1,0 +1,27 @@
+{
+  "name": "study-planner",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx",
+    "test": "echo \"No automated tests configured\""
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "date-fns": "^3.6.0",
+    "firebase": "^11.0.0",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "vite": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.8.0"
+  }
+}
+
