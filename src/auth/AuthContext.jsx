@@ -82,10 +82,16 @@ export function AuthProvider({ children }) {
 
   const signInWithGoogle = async () => {
     if (!auth || !googleProvider) {
-      console.error('Firebase Auth is not configured. Check your .env Firebase variables.')
-      return
+      const msg = 'Firebase Auth is not configured. Check your .env Firebase variables.'
+      console.error(msg)
+      throw new Error(msg)
     }
-    await signInWithPopup(auth, googleProvider)
+    try {
+      await signInWithPopup(auth, googleProvider)
+    } catch (error) {
+      console.error('Sign in error:', error)
+      throw error
+    }
   }
 
   const logout = () => signOut(auth)
